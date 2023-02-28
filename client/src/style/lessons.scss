@@ -1,0 +1,559 @@
+.Lessons{
+    width: 100%;
+    .add_lesson_container , .add_lesson_container2{
+        a{
+            text-decoration: none;
+            color:rgba(33, 20, 51, 0.507);
+        }
+        width: 30%;
+        height: 80%;
+        border-right: 1px solid rgba(0, 0, 0, 0.212);
+        position: fixed;
+        left: 10px;
+        text-align:center;
+        button:nth-child(1){
+            width: 80%;
+            margin-top:30px;
+            padding:7px 20px;
+            background-color: rgb(15, 15, 15);
+            border: 1px solid rgb(0, 0, 0);
+            color:white;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover{
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.322);
+            }
+            a{
+                color:white;
+                text-decoration: none;
+            }
+        }
+        input{
+            margin-top: 20px;
+            width: 79%;
+            padding:10px 5px;
+            border: none;
+            transition: 0.2s;
+            &:focus{
+                outline: none;
+                transform: scale(1.05);
+            }
+            &::placeholder{
+                text-align: right;
+                padding:10px;
+            }
+        }
+       #btn{
+            width: 80%;
+            margin-top:0px;
+            padding:7px 20px;
+            background-color: rgb(50, 117, 180);
+            border: 1px solid rgba(0, 0, 0, 0);
+            color:white;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover{
+                box-shadow: 0px 5px 10px rgba(50, 117, 180, 0.432);
+            }
+        }
+    }
+    .All_lessons , .All_lessons2 {
+        position: absolute;
+        right: 0;
+        text-align: right;
+        padding:10px 20px;
+        width: 64%;
+        #avatar{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+        #name{
+            position: relative;
+            top: -20px;
+            right: 15px;
+            color:rgba(0, 0, 0, 0.884);
+        }
+        #Date{
+            position: absolute;
+            right: 65px;
+            top: 50px;
+            color:rgba(0, 0, 0, 0.712);
+            font-size: 15px;
+        }
+        a{
+            text-decoration: none;
+            color:rgba(0, 0, 0, 0.89);
+           
+        }
+        .src{
+            text-align: center;
+            img{
+                max-width: 80%;
+            }
+        }
+        h1{
+            color:rgba(0, 0, 0, 0.815);
+            font-weight: 100;
+        }
+        pre{
+            white-space: pre-wrap;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            right: -5px;
+        }
+        .lesson{
+            width: 100%;
+            padding: 10px 0;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.055);
+            margin-bottom: 1px;
+            transition:0.2s;
+            .src{
+                display: inline-block;
+                position: relative;
+                img{
+                    display: inline-block;
+                    max-width: 250px;
+                    max-height:250px;
+                    min-height: 187px;
+                    object-fit: cover;
+                }
+            }
+            .content{
+                display: inline-block;
+                padding:5px 10px;
+                position: absolute;
+                top: 0;
+                right: 260px;
+                #content{
+                    position: relative;
+                    right: -20;
+                    height: 30px;
+                    color:rgba(0, 0, 0, 0.822);
+                }
+            }
+            &:hover{
+                cursor: pointer;
+              }
+        }
+        .Add_comment{
+            width: 100%;
+            textarea{
+                width: 90%;
+                resize: vertical;
+                display: block;
+                max-height: 150px;
+                margin:  auto;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                padding:10px;
+                border: 1px solid rgb(31, 94, 146);
+                transition: 0.2s;
+                &:focus{
+                    outline:none;
+                    transform: scale(1.04);
+                }
+            }
+            button{
+                width: 150px;
+                padding:7px 20px;
+                background-color: rgb(15, 15, 15);
+                border: 1px solid rgb(0, 0, 0);
+                color:white;
+                position: relative;
+                right: 5%;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover{
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.322);
+                }
+            }
+        }
+    }
+    .Show_Lesson{
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: right;
+        padding:10px 20px;
+        width: 100%;
+        background-color: rgb(233, 233, 233);
+        
+        #avatar{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+        #name{
+            position: relative;
+            top: -20px;
+            right: 15px;
+            color:rgba(0, 0, 0, 0.884);
+        }
+        #Date{
+            position: absolute;
+            right: 65px;
+            top: 50px;
+            color:rgba(0, 0, 0, 0.712);
+            font-size: 15px;
+        }
+        
+        .src{
+            text-align: center;
+            img{
+                max-width: 80%;
+                width: 50%;
+            }
+        }
+        h1{
+            color:rgba(0, 0, 0, 0.815);
+            font-weight: 100;
+        }
+        a{
+            color:rgb(22, 134, 199);
+        }
+        pre{
+            white-space: pre-wrap;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            right: -5px;
+        }
+        .lesson{
+            width: 100%;
+            padding: 10px 0;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.055);
+            margin-bottom: 1px;
+            transition:0.2s;
+          
+            .src{
+                display: inline-block;
+                position: relative;
+                img{
+                    display: inline-block;
+                    max-width: 250px;
+                    max-height:250px;
+                    min-height: 187px;
+                    object-fit: cover;
+                }
+            }
+            .content{
+                display: inline-block;
+                padding:5px 10px;
+                position: absolute;
+                top: 0;
+                right: 260px;
+                #content{
+                    position: relative;
+                    right: -20;
+                    height: 30px;
+                    color:rgba(0, 0, 0, 0.822);
+                }
+            }
+            &:hover{
+                cursor: pointer;
+              }
+        }
+        .Add_comment{
+            width: 100%;
+            textarea{
+                width: 90%;
+                resize: vertical;
+                display: block;
+                max-height: 150px;
+                margin:  auto;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                padding:10px;
+                border: 1px solid rgb(31, 94, 146);
+                transition: 0.2s;
+                &:focus{
+                    outline:none;
+                    transform: scale(1.04);
+                }
+            }
+            button{
+                width: 150px;
+                padding:7px 20px;
+                background-color: rgb(15, 15, 15);
+                border: 1px solid rgb(0, 0, 0);
+                color:white;
+                position: relative;
+                right: 5%;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover{
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.322);
+                }
+            }
+        }
+    }
+    @media screen and (max-width:961px){
+        .add_lesson_container{
+            position: absolute;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            left: 0;
+            height: 280px;
+            border-right: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+        }
+        
+        .All_lessons {
+            position: relative;
+            width: 100%;
+            top: 330px;
+            padding: 0;
+            .src{
+
+                text-align: right;
+                img{
+                    
+                    max-width: 100%;
+                    width: 95%;
+                    right: 0;
+                }
+            }
+         
+            .lesson{
+                
+                width: 94%;
+                margin: auto;
+                margin-bottom: 50px;
+                background-color:rgba(236, 236, 236, 0.589);
+                .src{
+                    width: 100%;
+                    img{
+                        max-width: 100%;
+                        max-height: 400px;
+                        object-fit: cover;
+                        display: block;
+                        width:100%;
+                        top: 0;
+                    }
+                }
+                .content{
+                    display: block;
+                    position: relative;
+                    z-index: 600;
+                    bottom: 0;
+                    right: 0;
+                    p{
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+        .Show_Lesson{
+            position: relative;
+            width: 99%;
+            top: -15px;
+            padding: 0;
+            margin-bottom: 150px;
+            .src{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                  width: 100%;
+               text-align: center;
+               margin: auto;
+                text-align: right;
+                img{
+                    max-width: 90%;
+                    width: 80%;
+                    margin: auto;
+                    width: 95%;
+                    left: 0;
+                }
+            }
+            #Date{
+                right: 55px;
+                top: 40px;
+            }
+            .lesson{
+                width: 94%;
+                margin: auto;
+                margin-bottom: 50px;
+                background-color:rgba(236, 236, 236, 0.589);
+               
+                .src{
+                    width: 100%;
+                    img{
+                        max-width: 100%;
+                        max-height: 400px;
+                        object-fit: cover;
+                        display: block;
+                        width:100%;
+                        top: 0;
+                    }
+                }
+                .content{
+                    display: block;
+                    position: relative;
+                    z-index: 600;
+                    bottom: 0;
+                    right: 0;
+                    p{
+                        margin-bottom: 25px;
+                    }
+                    
+                }
+            }
+        }
+        .All_lessons2{
+            position: relative;
+            width: 93%;
+            right: -8px;
+            padding: 0;
+            top: -40px;
+          
+        }
+      
+    }
+}
+
+.Create_Lesson {
+    width: 100%;
+    #EditText{
+        background-color: red;
+        width: 250px;
+    }
+
+    .ck.ck-editor__top .ck-sticky-panel .ck-toolbar, .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners{
+        margin-top: 20px;
+    }
+   
+    .ck-rounded-corners {
+        height: 450px;
+        margin-bottom: 80px;
+    }
+    form {
+
+      background-color: white;
+      width: 70%;
+      min-height: 70vh;
+      height: 100%;
+      text-align: center;
+      margin: auto;
+      padding-top: 70px;
+      p {
+        font-size: 20px;
+      }
+      input
+      {
+        width: 60%;
+        display: block;
+        margin: auto;
+        padding: 10px;
+        margin-top: 15px;
+        resize: vertical;
+        max-height: 250px;
+        border: 1px solid rgb(38, 107, 163);
+        transition: 0.2s;
+        &:focus {
+          outline: none;
+        }
+      }
+      input[type='file']{
+          resize:none;
+      }
+      #btn {
+        width: 40%;
+        min-width: 150px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        padding: 7px 20px;
+        background-color: rgb(15, 15, 15);
+        border: 1px solid rgb(0, 0, 0);
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.322);
+        }
+      }
+    }
+    @media screen and (max-width: 679px) {
+      form {
+        width: 100%;
+        position: absolute;
+        padding-top: 100px;
+        top: 60px;
+        height: 90vh;
+        input,
+        textarea {
+          width: 90%;
+        }
+        padding-bottom: 50px;
+      }
+     
+    }
+  }
+
+
+.Lessons{
+    .Show_Lesson{
+        blockquote{
+          background-color: rgb(211, 211, 211);
+          border-right: 5px solid rgb(150, 150, 150);
+          padding:4px 0px;
+          width: 100%;
+          right: 0;
+          margin: 0;
+
+          *{
+              padding:5px 10px;
+          }
+        }
+        #content{
+            margin-top: 60px;
+            word-wrap: pre-wrap;
+
+        }   
+        
+        table{
+            border: 1px solid rgba(0, 0, 0, 0.137);
+            padding:5px;
+            width: 100%;
+            tr{
+                width: 100%;
+                word-wrap: pre-wrap;
+
+                td{
+                    width: 100%;
+                    word-wrap: pre-wrap;
+
+                    border: 1px solid rgba(50, 139, 212, 0.356);
+                    padding: 10px;
+                }
+            }
+        }
+        code{
+            color:rgba(0, 0, 0, 0.76);
+            background-color: rgb(192, 192, 192);
+            border-right:3px solid rgb(241, 152, 49) ;
+            border-left:3px solid rgb(241, 152, 49) ;
+            padding:5px;
+        }
+        
+    }
+    @media screen and (max-width:961px) {
+        .Show_Lesson{
+            padding: 0;
+            margin: 0;
+          
+        }
+       
+    }
+}

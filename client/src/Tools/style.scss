@@ -1,0 +1,148 @@
+@import 'function';
+// Spinner Loding
+.Spinner{
+    width: 25px;
+    height: 25px;
+    border-left:11px double rgb(75, 133, 240);
+    border-right:11px double rgb(233, 53, 30);
+    border-bottom:11px solid rgba(110, 226, 125, 0);
+    border-top:11px solid rgba(224, 173, 32, 0);
+    border-radius:100%;
+    animation:Spinner 0.44s cubic-bezier(0.39, 0.575, 0.565, 1) infinite;
+}
+// Animation Spinner
+
+@keyframes Spinner {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg)
+    }
+}
+
+
+// Text Input
+.InputText[type='email'] , .InputText[type='text'] , .InputText[type='password']{
+    width: 60%;
+    padding:5px 5px;
+    border: 0.1em solid rgb(158, 189, 255);
+    box-shadow: 0 0 5px rgba(158, 189, 255, 0.651);
+    border-radius:4px;
+    &:focus{
+        outline:none;
+    }
+}
+.InputText[type='color']{
+    display:block;
+    margin: auto;
+}
+
+// Button
+.Button{
+    width: 100px;
+    padding:10px;
+    border:none;
+    color:white;
+    border-radius: 4px;
+    display: block;
+    margin:5px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover{
+        background-color:rgb(36, 30, 53);
+        box-shadow: 0 0 5px rgb(36, 30, 53);
+    }
+}
+
+
+
+
+// Message Box 
+.MessageBoxHide{
+   display: none;
+}
+.MessageBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.342);
+    backdrop-filter: blur(3px);
+    .Card{
+        color:white;
+        background-color:rgb(32, 50, 77);
+        width: 50%;
+        height: 250px;
+        border-radius:10px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.575);
+        border:1px solid rgba(168, 168, 168, 0.637);
+        animation:Card 0.7s  cubic-bezier(0.21, 1.1, 0, 1.1);
+        
+        .Exit{
+            position: absolute;
+            left: 15px;
+            top: 0px;
+            font-size: 26px;
+            font-weight: bold;
+            color:rgb(255, 68, 68);
+            cursor: pointer;
+        }
+        .Title{
+            font-size: 25px;
+        }
+        .Content{
+            color:#cacaca;
+        }
+        button{
+            // width: 150px;
+            padding:5px 40px;
+            background-color: transparent;
+            color:white;
+            border: 1px solid rgba(255, 255, 255, 0.582);
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            transition: 0.2s;
+            &::before{
+                content:"";
+                position: absolute;
+                left: -100%;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color:rgb(58, 115, 180);
+                z-index: -1;
+                transition:0.2s;
+            }
+            &:hover::before{
+                left: 0;
+            }
+            &:hover{
+                border: 1px solid rgba(255, 255, 255, 0);
+            }
+        }
+       
+    }
+    @keyframes Card {
+        0%{
+            transform:scale(0)
+        }
+        100%{
+            transform:scale(1);
+            z-index: 500;
+        }
+    }
+   
+  
+}

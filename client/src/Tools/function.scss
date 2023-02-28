@@ -1,0 +1,13 @@
+// Change Backgroun Color
+@function text($color){
+    @if(lightness($color) > 50 ){
+        @return #333;
+    }@else{
+        @return #fff;
+    }
+}
+
+@mixin Background($color){
+    background-color:lighten($color,20);
+    color:text($color);
+}
